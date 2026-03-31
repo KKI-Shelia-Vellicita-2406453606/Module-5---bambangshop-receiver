@@ -12,7 +12,7 @@ pub struct Notification {
 }
 
 impl Display for Notification {
-    fn fmt(&self, f: &mut Formatter<_>) -> Result {
+    fn fmt(&self, f: &mut Formatter) -> Result {
         if self.status.to_uppercase().eq("CREATED") {
             return write!(f,
                 "Hello {}, let's try our new {} product: {}, only in BambangShop! Check it out: {}",
